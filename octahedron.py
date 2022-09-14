@@ -1,5 +1,5 @@
-#Copyright (c) (Nolan T.) 2022 ~ MIT Public Licence (Current Valid Licence is availaiable at: http://wuffs.net/Licence )
-#.Interactive Python Notebook version availiable at: https://wuffs.net/CS-Fall22
+#Copyright (c) (Nolan T.) 2022 ~ MIT Public Licence (Current Valid Licence is available at: http://wuffs.net/Licence )
+#.Interactive Python Notebook version available at: https://wuffs.net/CS-Fall22
 #.Py File Last Modified: 9/13/2022
 #!!No external PIP repos needing to be imported!!
 
