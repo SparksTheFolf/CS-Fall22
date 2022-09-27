@@ -3,8 +3,8 @@ Author: Nolan T. (CS118 Fall Class)
 Last Edited: 09/26/2022
 Online Version Avail: https://s.wuffs.net/CS-Fall22
 
-This program is designed to take the input of a {prime} prime number and determine if it is a Prime number {TRUE} or
-not a prime number {FALSE}.
+This program is designed to take the input of a prime number {prime} and determine if it is a Prime number {TRUE} or
+not a prime number {FALSE}, then print the max values {max_value}.
 """
 prm_number = []
 number = []
