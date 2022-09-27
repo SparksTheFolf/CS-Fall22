@@ -16,14 +16,14 @@ for x in range(repeat):
     prime = int(input("Enter a possible prime number greater than 1: "))
     number.append(prime)
     if prime <= 1:
-        print(prime, f"is not a prime number because it is less than 1")
+        print(f"{prime} is not a prime number because it is less than 1")
     if prime > 1:
         for num in range(2, prime):
             if (prime % num) == 0:  # Prime Number Formula
                 print(f"{prime} is not a prime number because it is devisable by {num}")
                 break
         else:
-            print(prime, f"is a prime number")
+            print(f"{prime} is a prime number")
             prm_number.append(prime)
 
 #  Bonus Points Section
