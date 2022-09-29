@@ -9,7 +9,10 @@ not a prime number {FALSE}, then print the max values {max_value}.
 
 prm_number = []  # Adds the primed number to list
 number = []  # Adds the main input number to list
+max_num = prm_number
 repeat = 5  # Repeats the program 5 times
+start_max_num = 0
+
 
 for x in range(repeat):
     print()  # Empty Line For Readability
@@ -30,7 +33,11 @@ for x in range(repeat):
 if repeat >= 5:
     length_num = len(number)
     length_prm = len(prm_number)
-    max_value = max(prm_number)
+
+    for number in prm_number:
+        if number > start_max_num:
+            start_max_num = number
+
     print()  # Empty Line For Readability
-    print(f"{length_num} of numbers were examined, {length_prm} of those were prime, "
-          f" and the largest was {max_value}.")
+    print(f"{length_num} of numbers were examined, {length_prm} of those were prime,"
+          f" and the largest was {start_max_num}.")

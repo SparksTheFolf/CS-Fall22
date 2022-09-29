@@ -1,15 +1,7 @@
-print("I will now count my chickens")
-#BRUH
-print("Hens", + 25 +30 / 6)
-print("Roosters", 100 - 25 * 3)
+Numbers = [6,2,3,7,2,9,4,8]
+higest_number = 0
+for number in Numbers:
+    if number > higest_number:
+        higest_number = number
 
-print("Now I count the egss: ")
-
-print(3 + 2 + 1 -5 +4 % 2 - 1 /4 + 6)
-
-print("Is it true that 3 + 2 < 5 - 7?")
-
-print(3+2<5-7)
-
-print("What is 3 + 2", 3+2)
-
+print(higest_number)
