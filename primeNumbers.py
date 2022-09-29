@@ -13,9 +13,9 @@ repeat = 5  # Repeats the program 5 times
 start_max_num = 0  # For max
 
 
-def main():
+def run():
     global start_max_num
-    for x in range(repeat):
+    for main in range(repeat):
         print()  # Empty Line For Readability
         prime = int(input("Enter a possible prime number greater than 1: "))
         number.append(prime)
@@ -47,8 +47,8 @@ def main():
         prm_number.clear()  # Clears the lists
         number.clear()
         print("~~End of Program, Restarting~~")
-        main()  # Returns to main method
+        run()  # Returns to main method
 
 
-main()  # Calls the Main method
+run()  # Calls the Main method
 
