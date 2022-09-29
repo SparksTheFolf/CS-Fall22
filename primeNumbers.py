@@ -21,7 +21,7 @@ def main():
         number.append(prime)
         if prime <= 1:
             print(f"{prime} is not a prime number because it is less than 1, Restarting the Program")
-            main()
+            return
         if prime > 1.1:
             for num in range(2, prime):
                 if (prime % num) == 0:  # Prime Number Formula
@@ -36,7 +36,7 @@ def main():
         length_num = len(number)
         length_prm = len(prm_number)
 
-        for looking_num in prm_number:
+        for looking_num in number:  # Find the max value
             if looking_num > start_max_num:
                 start_max_num = looking_num
 
