@@ -44,6 +44,11 @@ def main():
         print(f"{length_num} of numbers were examined, {length_prm} of those were prime,"
               f" and the largest was {start_max_num}.")
 
+        prm_number.clear()  # Clears the lists
+        number.clear()
+        print("~~End of Program, Restarting~~")
+        main()  # Returns to main method
+
 
 main()  # Calls the Main method
 
