@@ -1,3 +1,4 @@
-lst = [12, 3, 56]
-
-print(lst.sort())
+lst = list(range(20))
+for i in range(10):
+        print(i)
+print(lst)
