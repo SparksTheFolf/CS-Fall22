@@ -1,4 +1,3 @@
-lst = list(range(20))
-for i in range(10):
-        print(i)
-print(lst)
+lst = []
+for i in range(1, 200, 2):
+        print(len(i))
