@@ -1,7 +1,3 @@
-Numbers = [6,2,3,7,2,9,4,8]
-higest_number = 0
-for number in Numbers:
-    if number > higest_number:
-        higest_number = number
+lst = [12, 3, 56]
 
-print(higest_number)
+print(lst.sort())
