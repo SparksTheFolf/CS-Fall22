@@ -4,7 +4,8 @@ Last Edited: 09/26/2022
 Online Version Avail: https://github.com/SparksTheFolf/CS-Fall22
 
 This program is designed to take the input of a prime number {prime} and determine if it is a Prime number {TRUE} or
-not a prime number {FALSE}, then print the max values {max_value}. Then allows the user to restart the program.
+not a prime number {FALSE}, then print the max values {max_value} after 5 inputs. Then allows the user to restart the
+program.
 """
 
 prm_number = []  # Adds the primed number to list
