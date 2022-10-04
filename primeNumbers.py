@@ -1,6 +1,6 @@
 """
 Author: Nolan T. (CS118 Fall Class)
-Last Edited: 09/29/2022
+Last Edited: 10/4/2022
 Online Version Avail: https://github.com/SparksTheFolf/CS-Fall22
 
 This program is designed to take the input of a prime number {prime} and determine if it is a Prime number {TRUE} or
