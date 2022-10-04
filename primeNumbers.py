@@ -15,19 +15,18 @@ start_max_num = 0  # For max
 
 for main in range(repeat):
     print()  # Empty Line For Readability
-    prime = int(input("Enter a possible prime number greater than 1: "))
+    prime = int(input("Enter a number greater than 1: "))
     number.append(prime)
     if prime <= 1:
         print(f"{prime} is a number equal or less to one")
         exit()
-    if prime > 1.1:
-        for num in range(2, prime):
-            if (prime % num) == 0:  # Prime Number Formula
-                print(f"{prime} is not a prime number because it is devisable by {num}")
-                break
-        else:
-            print(f"{prime} is a prime number")
-            prm_number.append(prime)
+    for num in range(2, prime):
+        if (prime % num) == 0:  # Prime Number Formula
+            print(f"{prime} is not a prime number because it is devisable by {num}")
+            break
+    else:
+        print(f"{prime} is a prime number")
+        prm_number.append(prime)
 
 #  Bonus Points Section
 if repeat >= 5:
