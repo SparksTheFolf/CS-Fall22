@@ -29,5 +29,3 @@ elif inputCustom == 7:
     print("Sunday")
 else:
     print("Invalid Input.")
-
-exit()
