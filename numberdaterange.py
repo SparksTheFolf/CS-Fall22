@@ -14,19 +14,20 @@ Sunday = 7
 
 inputCustom = input("Please enter a number 1-7: ")
 if inputCustom.isnumeric():
-    if inputCustom == 1:
+    num = int(inputCustom)
+    if num == 1:
         print("Monday")
-    elif inputCustom == 2:
+    elif num == 2:
         print("Tuesday")
-    elif inputCustom == 3:
+    elif num == 3:
         print("Wednesday")
-    elif inputCustom == 4:
+    elif num == 4:
         print("Friday")
-    elif inputCustom == 5:
+    elif num == 5:
         print("Saturday")
-    elif inputCustom == 6:
+    elif num == 6:
         print("Saturday")
-    elif inputCustom == 7:
+    elif num == 7:
         print("Sunday")
     else:
         print("Invalid Input.")
