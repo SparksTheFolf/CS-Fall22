@@ -12,24 +12,13 @@ Sunday = 7
 
 """
 
+lst = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"]
 inputCustom = input("Please enter a number 1-7: ")
 if inputCustom.isnumeric():
     num = int(inputCustom)
-    if num == 1:
-        print("Monday")
-    elif num == 2:
-        print("Tuesday")
-    elif num == 3:
-        print("Wednesday")
-    elif num == 4:
-        print("Friday")
-    elif num == 5:
-        print("Saturday")
-    elif num == 6:
-        print("Saturday")
-    elif num == 7:
-        print("Sunday")
+    if num in range(1,8):
+        print(lst[num-1])
     else:
-        print("Invalid Input.")
+        print("Invalid entry")
 else:
-    print("BRUH")
+    print("input not numeric.")
