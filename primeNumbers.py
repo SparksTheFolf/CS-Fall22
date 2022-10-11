@@ -28,7 +28,7 @@ for main in range(repeat):
         print(f"{prime} is a prime number")
         prm_number.append(prime)
 
-#  Bonus Points Section
+#  Bonus Points Sectiont
 if repeat >= 5:
     length_num = len(number)
     length_prm = len(prm_number)
