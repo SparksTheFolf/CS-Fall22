@@ -5,18 +5,19 @@ Last Edited: 10/18/2022 Online Version Avail: https://github.com/SparksTheFolf/C
 Purpose: This program is designed to take the input of a sentence, and convert it to pig latin, and then convert it back to regular plain english, and detect it.
 """
 while True:
-    theInput = input('\n\nInput a sentence to be translated to pig-latin:\n\n').lower()
-    translationToPL = theInput.split()
+    theInput = str(input('\n\nInput a sentence to be translated:\n')).lower()
+    remove = theInput.replace('?', '')
+    trans = remove.split()
     if not theInput:
         print("No string inputted, ending program.")
         break
-    for secondary, words in enumerate(translationToPL):
+    for secondary, words in enumerate(trans):
         if words[0] in 'aeiou':
-            translationToPL[secondary] = translationToPL[secondary] + "-yay"
+            trans[secondary] = trans[secondary] + "-yay"
         else:
             for third, char in enumerate(words):
                 if char in 'aeiou':
-                    translationToPL[secondary] = words[third:] + "-" + words[:third] + "ay"
+                    trans[secondary] = words[third:] + "-" + words[:third] + "ay"
                     break
 
-    print('Translated to Pig-Latin: ' + ' '.join(translationToPL))
+    print('Translated to Pig-Latin: ' + ' '.join(trans))
