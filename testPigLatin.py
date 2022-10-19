@@ -16,10 +16,8 @@ for i, word in enumerate(words):
         vowel = False
         for j, letter in enumerate(word):
             if letter in 'aeiou':
-                words[i] = word[j:] + word[:j] + "ay"
+                words[i] = word[j:] + "-" + word[:j] + "ay"
                 has_vowel = True
                 break
-        if not vowel:
-            words[i] = words[i] + "ay"
 
-print(' '.join(words))
+print('Translated:' + ' '.join(words))
