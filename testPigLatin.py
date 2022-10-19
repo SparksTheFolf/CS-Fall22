@@ -11,12 +11,15 @@ while True:
     if not theInput:
         print("No string inputted, ending program.")
         break
-    for secondary, words in enumerate(trans):
-        if words[0] in 'aeiou':
-            trans[secondary] = trans[secondary] + "-yay"
-        else:
-            for third, char in enumerate(words):
-                if char in 'aeiou':
-                    trans[secondary] = words[third:] + "-" + words[:third] + "ay"
-                    break
-    print('Translated into Pig-Latin: ' + ' '.join(trans))
+    if any((c in '-yay') for c in trans):  # Language Detector
+        print('nope')
+    else:
+        for secondary, words in enumerate(trans):
+            if words[0] in 'aeiou':
+                trans[secondary] = trans[secondary] + "-yay"
+            else:
+                for third, char in enumerate(words):
+                    if char in 'aeiou':
+                        trans[secondary] = words[third:] + "-" + words[:third] + "ay"
+                        break
+        print('Translated into Pig-Latin: ' + ' '.join(trans))
