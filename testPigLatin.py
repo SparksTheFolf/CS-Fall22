@@ -6,25 +6,20 @@ Online Version Avail: https://github.com/SparksTheFolf/CS-Fall22
 
 This program is designed to take the input of a sentence, and convert it to pig latin, and then convert it back to regular plain english, and detect it.
 """
+sentence = input('Enter a Sentence: ').lower()
+words = sentence.split()
 
-"""
-s = input("Input text to be translated: ")
-lst = s.split()
-print(lst)
+for i, word in enumerate(words):
+    if word[0] in 'aeiou':
+        words[i] = words[i] + "-yay"
+    else:
+        vowel = False
+        for j, letter in enumerate(word):
+            if letter in 'aeiou':
+                words[i] = word[j:] + word[:j] + "ay"
+                has_vowel = True
+                break
+        if not vowel:
+            words[i] = words[i] + "ay"
 
-for word in lst:
-    word += "-"
-    if word[0] in "aeiouy":
-        word+="yay"
-        print(word)
-"""
-
-words = str(input("Input Sentence:")).split()
-
-for word in words:
-    #word += "-"
-    if word[0] in "aeiouy":
-        word += "yay"
-        #print(word)
-    print(word[1:] + word[0] + "ay", end=" ")
-print()
+print(' '.join(words))
