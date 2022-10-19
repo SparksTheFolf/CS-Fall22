@@ -6,7 +6,7 @@ Purpose: This program is designed to take the input of a sentence, and convert i
 """
 while True:
     theInput = str(input('\n\nInput a sentence to be translated:\n')).lower()
-    remove = theInput.replace('?', '').replace('.', '').replace(',', '')
+    remove = theInput.replace('?', '').replace('.', '').replace(',', '')  # Allow the deletion of "," or "." or "?"
     trans = remove.split()
     if not theInput:
         print("No string inputted, ending program.")
