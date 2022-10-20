@@ -6,12 +6,13 @@ Purpose: This program is designed to take the input of a sentence, and convert i
 """
 while True:
     theInput = str(input('\n\nInput a sentence to be translated:\n')).lower()
-    remove = theInput.replace('?', '').replace('.', '').replace(',', '')  # Allow the deletion of "," or "." or "?"
+    remove = theInput.replace('?', '').replace('.', '').replace(',', '').replace('~', '').replace('!', '').replace('#', '').replace('$', '').replace('%', '').replace("'", '')  # Allow the deletion of "," or "." or "?"
+    char = ["-yay", "-ay"]
     trans = remove.split()
     if not theInput:
         print("No string inputted, ending program.")
-        break
-    if any((c in '-yay') for c in trans):  # Language Detector
+        exit()
+    if "-yay" in remove or "-ay" in remove:  # Language Detector
         print('nope')
     else:
         for secondary, words in enumerate(trans):

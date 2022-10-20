@@ -17,4 +17,11 @@ while True:
                     break
             english += word[index:-2] + word[:index - 1] + " "
     print(english)
-    break
+
+break
+
+
+data = "hello"
+
+for i in range(leng(data) - 1, -1, -1)
+    print(data[i], end="")
