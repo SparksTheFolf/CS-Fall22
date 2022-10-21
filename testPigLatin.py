@@ -23,3 +23,4 @@ while True:
                         trans[secondary] = words[third:] + "-" + words[:third] + "ay"
                         break
         print('Translated into Pig-Latin: ' + ' '.join(trans))
+        
