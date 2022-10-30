@@ -21,7 +21,7 @@ while True:
                 final+=words[x]
             final+=" "
             bruh = str(final)
-            hmm = bruh.replace("-", "").replace("yy", "y").replace("yare", "are") # Remove the "y" and "yay" and "yare" and "yy"
+            hmm = bruh.replace("-", "").replace("yy", "y").replace("yare", "are") # Remove the "y" and "-yay" and "yare" and "yy" and redo conversion
         print('\nTranslated into English:\n' + hmm)
     else:
         for secondary, words in enumerate(trans):
