@@ -13,10 +13,10 @@ while True:
         exit()
     if "-yay" in remove or "-ay" in remove:  # Language Detector
         final=""
-        ok = theInput.split()
-        for words in ok:
-            last = words[len(words)-3]
-            final+=last
+        splited = theInput.split()
+        for words in splited:
+            lastWord = words[len(words)-3]
+            final+=lastWord
             for x in range(len(words)-3):
                 final+=words[x]
             final+=" "
