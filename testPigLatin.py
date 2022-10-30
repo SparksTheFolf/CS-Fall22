@@ -6,21 +6,29 @@ Purpose: This program is designed to take the input of a sentence, and convert i
 """
 while True:
     theInput = str(input('\n\nInput a sentence to be translated:\n')).lower()
-    remove = theInput.replace('?', '').replace('.', '').replace(',', '').replace('~', '').replace('!', '').replace('#', '').replace('$', '').replace('%', '').replace("'", '')  # Allow the deletion of "," or "." or "?"
+    remove = theInput.replace('?', '').replace('.', '').replace(',', '').replace('~', '').replace('!', '').replace('#', '').replace('$', '').replace('%', '').replace("'", '').replace("+", "") # Allow the deletion of "," or "." or "?"
     trans = remove.split()
     if not theInput:
-        print("No string inputted, ending program.")
         exit()
     if "-yay" in remove or "-ay" in remove:  # Language Detector
-        print('nope')
+        new=""
+        ok = theInput.split()
+        for word in ok:
+            last = word[len(word)-3]
+            new+=last
+            for i in range(len(word)-3):
+                new+=word[i]
+            new+=" "
+            bruh = str(new)
+            hmm = bruh.replace("-", "").replace("yy", "y").replace("yare", "are") # Remove the "y" and "yay" and "yare" and "yy"
+        print('\nTranslated into English:\n' + hmm)
     else:
         for secondary, words in enumerate(trans):
-            if words[0] in 'aeiou':
+            if words[0] in 'aeiouy':
                 trans[secondary] = trans[secondary] + "-yay"
             else:
                 for third, char in enumerate(words):
-                    if char in 'aeiou':
+                    if char in 'aeiouy':
                         trans[secondary] = words[third:] + "-" + words[:third] + "ay"
                         break
-        print('Translated into Pig-Latin: ' + ' '.join(trans))
-        
+        print('\nTranslated into Pig-Latin:\n' + ' '.join(trans))
