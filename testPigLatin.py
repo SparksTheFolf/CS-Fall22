@@ -11,15 +11,15 @@ while True:
     if not theInput:
         exit()
     if "-yay" in remove or "-ay" in remove:  # Language Detector
-        new=""
+        final=""
         ok = theInput.split()
-        for word in ok:
-            last = word[len(word)-3]
-            new+=last
-            for i in range(len(word)-3):
-                new+=word[i]
-            new+=" "
-            bruh = str(new)
+        for words in ok:
+            last = words[len(words)-3]
+            final+=last
+            for x in range(len(words)-3):
+                final+=words[x]
+            final+=" "
+            bruh = str(final)
             hmm = bruh.replace("-", "").replace("yy", "y").replace("yare", "are") # Remove the "y" and "yay" and "yare" and "yy"
         print('\nTranslated into English:\n' + hmm)
     else:
