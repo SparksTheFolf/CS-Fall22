@@ -1,9 +1,10 @@
 """
 English to Pig-Latin, Pig-Latin to english translator !!!!!!!!TESTING!!!!!!!!!!!!!!!!!!!
 Author: Nolan T. (CS118 Fall Class)
-Last Edited: 10/19/2022 Online Version Avail: https://github.com/SparksTheFolf/CS-Fall22
+Last Edited: 10/30/2022 Online Version Avail: https://github.com/SparksTheFolf/CS-Fall22
 Purpose: This program is designed to take the input of a sentence, and convert it to pig latin, and then convert it back to regular plain english, and detect it. And also allow it to remove special chars.
 """
+
 while True:
     theInput = str(input('\n\nInput a sentence to be translated:\n')).lower()
     remove = theInput.replace('?', '').replace('.', '').replace(',', '').replace('~', '').replace('!', '').replace('#', '').replace('$', '').replace('%', '').replace("'", '').replace("+", "") # Allow the deletion of "," or "." or "?"
@@ -32,3 +33,4 @@ while True:
                         trans[secondary] = words[third:] + "-" + words[:third] + "ay"
                         break
         print('\nTranslated into Pig-Latin:\n' + ' '.join(trans))
+        
