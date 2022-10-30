@@ -1,3 +1,4 @@
+"""
 theInput = str(input('\n\nInput a sentence to be translated:\n')).lower()
 remove = theInput.replace('?', '').replace('.', '').replace(',', '')  # Allow the deletion of "," or "." or "?"
 trans = remove.split()
@@ -25,3 +26,5 @@ data = "hello"
 
 for i in range(leng(data) - 1, -1, -1)
     print(data[i], end="")
+    
+    """
