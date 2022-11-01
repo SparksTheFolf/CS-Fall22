@@ -1,2 +1,3 @@
-for i in range(0,10000, 10):
-    print(i)
+s = "123,456,789"
+
+print( f"Center >{s.split(',')[1]}<" )
