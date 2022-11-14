@@ -18,6 +18,8 @@ if not n.isdigit():
     exit()
 
 n=int(n)
+
+
 def random_generator() -> int:
     """ returns a random integer between 1 and n inclusive and then repeats until n is generated """
     while True:
