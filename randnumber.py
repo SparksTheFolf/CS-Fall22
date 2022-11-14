@@ -17,7 +17,7 @@ if not n.isdigit():
     print("Please enter a valid number.")
     exit()
 
-n=int(n)
+n = int(n)
 
 
 def random_generator() -> int:
@@ -35,11 +35,6 @@ def back_to_back() -> int:
     return len(randomlist)
 
 
-def number_last() -> int:
-    """ returns the last number generated """
-    return randomlist[-1]
-
-
 def how_often() -> int:
     """ returns the number of times the most common integer was generated """
     return max(randomlist.count(x) for x in randomlist)
@@ -48,6 +43,11 @@ def how_often() -> int:
 def most_often() -> int:
     """ returns the most common integer """
     return max(set(randomlist), key=randomlist.count)
+
+
+def number_last() -> int:
+    """ returns the last number generated from the how_often function """
+    return randomlist[-1]
 
 
 def main() -> None:
