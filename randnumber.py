@@ -1,3 +1,4 @@
+"""Nolan T. 11/14/2022 - Playing with functions, list, dictionaries and random numbers."""
 from random import randint
 from typing import Type
 
@@ -28,8 +29,23 @@ def back_to_back() -> (int, int):
     return max(num, key=num.get), max(num.values())
 
 
-def most_common():
+def last_number():
+    """ returns the last number in the list"""
+    return randomlist[-1]
+
+
+def most_common_times():
     """ returns the most common number in the list"""
+    for i in range(len(randomlist)):
+        if randomlist[i] not in num:
+            num[randomlist[i]] = 1
+        else:
+            num[randomlist[i]] += 1
+    return max(num.values())
+
+
+def most_often():
+    """return the most shown number in the list"""
     for i in range(len(randomlist)):
         if randomlist[i] not in num:
             num[randomlist[i]] = 1
@@ -38,7 +54,9 @@ def most_common():
     return max(num, key=num.get)
 
 
-last = randomlist[-1]
+how_often = most_common_times()
+last = last_number()
+most_often = most_often()
 k = len(randomlist)
 
 print(f"Creating a random sequence of all integers 1 .. {n} required {k} randint(1,{n}) calls")
