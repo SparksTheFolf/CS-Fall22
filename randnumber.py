@@ -3,9 +3,7 @@ Author: Nolan T. (CS118 Fall Class)
 Last Edited: 11/14/2022
 Online Version Avail: https://github.com/SparksTheFolf/CS-Fall22
 
-This program is designed to take the input of a prime number {prime} and determine if it is a Prime number {TRUE} or
-not a prime number {FALSE}, then print the max values {max_value} after 5 inputs. Then allows the user to restart the
-program.
+This program will generate a random number between 1 and n inclusive and then repeat until n is generated. Then it will print the number of times the random number generator was called, the last number generated, the number of times the most common integer was generated, and the most common integer.
 """
 from random import randint
 
