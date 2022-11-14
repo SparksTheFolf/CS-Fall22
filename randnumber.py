@@ -1,6 +1,6 @@
 """
 Author: Nolan T. (CS118 Fall Class)
-Last Edited: 10/4/2022
+Last Edited: 11/14/2022
 Online Version Avail: https://github.com/SparksTheFolf/CS-Fall22
 
 This program is designed to take the input of a prime number {prime} and determine if it is a Prime number {TRUE} or
@@ -10,12 +10,16 @@ program.
 from random import randint
 
 print("Creating all the integers from 1 to n (inclusive) randomly.")
-n = int(input("Please enter the upper boundary, n = "))
+n = input("Please enter the upper boundary, n = ")
 randomlist = []
 
 """Write a Python program that generates random numbers 1 to n (inclusive), until all integers 1 to n have been generated at least once."""
 
+if not n.isdigit():
+    print("Please enter a valid number.")
+    exit()
 
+n=int(n)
 def random_generator() -> int:
     """ returns a random integer between 1 and n inclusive and then repeats until n is generated """
     while True:
