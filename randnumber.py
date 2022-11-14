@@ -1,6 +1,13 @@
-"""Nolan T. 11/14/2022 - Playing with functions, list, dictionaries and random numbers."""
+"""
+Author: Nolan T. (CS118 Fall Class)
+Last Edited: 10/4/2022
+Online Version Avail: https://github.com/SparksTheFolf/CS-Fall22
+
+This program is designed to take the input of a prime number {prime} and determine if it is a Prime number {TRUE} or
+not a prime number {FALSE}, then print the max values {max_value} after 5 inputs. Then allows the user to restart the
+program.
+"""
 from random import randint
-from typing import Tuple
 
 print("Creating all the integers from 1 to n (inclusive) randomly.")
 n = int(input("Please enter the upper boundary, n = "))
