@@ -1,15 +1,16 @@
-"""
-
-Count the amount of times you have to roll the dice depending on the number of rolls
-
-"""
 from random import randint
-total = 0
-count = 0
-roll = randint(1, 6)
-while count < 6:
-    total += 1
-    print(roll)
-    if 6 == roll:
-        count += 1
-print(f"Rolled the dice {total} times to get six 10 times")
+
+print("Creating all the integers from 1 to n (inclusive) randomly.")
+
+n = input("Please enter the upper boundary, n = ")
+
+
+def new_random():
+    if type(n) == int:
+        p = int(n)
+        print("ok")
+    elif type(n) == str:
+        print("not ok")
+
+
+new_random()

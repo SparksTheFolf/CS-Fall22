@@ -1,3 +1,8 @@
-s = "123,456,789"
+d = {'alan':123, 'cat':456, 'cat': 890, 'dan':12345}
 
-print( f"Center >{s.split(',')[1]}<" )
+for key, value in d.items():
+    if key == 'cat':
+        print(value)
+
+
+
