@@ -28,6 +28,16 @@ def back_to_back() -> (int, int):
     return max(num, key=num.get), max(num.values())
 
 
+def most_common():
+    """ returns the most common number in the list"""
+    for i in range(len(randomlist)):
+        if randomlist[i] not in num:
+            num[randomlist[i]] = 1
+        else:
+            num[randomlist[i]] += 1
+    return max(num, key=num.get)
+
+
 last = randomlist[-1]
 k = len(randomlist)
 
