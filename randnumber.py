@@ -1,49 +1,52 @@
 """Nolan T. 11/14/2022 - Playing with functions, list, dictionaries and random numbers."""
 from random import randint
+from typing import Tuple
 
 print("Creating all the integers from 1 to n (inclusive) randomly.")
 n = int(input("Please enter the upper boundary, n = "))
 randomlist = []
-often = 0
 
 """Write a Python program that generates random numbers 1 to n (inclusive), until all integers 1 to n have been generated at least once."""
 
 
-def new_random() -> int:
-    """ returns a unique random number, one that has not been returned before. and adds it to the list"""
-    random = randint(1, n)
-    return randint(1, n)
+def random_generator() -> int:
+    """ returns a random integer between 1 and n inclusive and then repeats until n is generated """
+    while True:
+        random_int = randint(1, n)
+        randomlist.append(random_int)
+        if random_int == n:
+            break
+    return random_int
 
 
-def last_number():
-    """ returns the last number in the list"""
-    return randomlist[-1]
-
-
-def most_often() -> int:
-    """return the most shown number in the list"""
-    return max(randomlist, key=randomlist.count)
-
-
-def how_often() -> int:
-    """return the most shown number in the list"""
-    return randomlist.count(most_often())
-
-
-def amount_return() -> int:
-    """returns the amount of times that the new_random() was called"""
+def back_to_back() -> int:
+    """ returns the number of times the random number generator was called """
     return len(randomlist)
 
 
-while len(randomlist) < n:
-    randomlist.append(new_random())
+def number_last() -> int:
+    """ returns the last number generated """
+    return randomlist[-1]
 
 
-def amount() -> int:
-    """returns the amount of times that the most shown number was shown in a row"""
-    return randomlist.count(most_often())
+def how_often() -> int:
+    """ returns the number of times the most common integer was generated """
+    return max(randomlist.count(x) for x in randomlist)
 
 
-print(f"Creating a random sequence of all integers 1 .. {n} required {amount_return()} randint(1,{n}) calls")
-print(f"The integer that was created last was {last_number()}.")
-print(f"The integer that was created the most times in a row, {how_often()} times, was {most_often()}.")
+def most_often() -> int:
+    """ returns the most common integer """
+    return max(set(randomlist), key=randomlist.count)
+
+
+def main() -> None:
+    """ main function """
+    random_generator()
+    print(f"Creating a random sequence of all integers 1 to {n} required {back_to_back()} randint(1,{n}) calls")
+    print(f"The integer that was created last was {number_last()}.")
+    print(f"The integer that was created the most times in a row, {how_often()} times, was {most_often()}.")
+    print(f"Number of random integers generated: {len(randomlist)}")
+
+
+if __name__ == "__main__":
+    main()
