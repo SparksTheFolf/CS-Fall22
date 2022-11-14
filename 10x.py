@@ -1,9 +1,3 @@
-data = "yay-yay ow-hay are-yay you-yay oing-day oday-tay"
-hi = data.split()
+test = [1,2,3,4,5,6,7,8,9,0]
 
-for i in range(len(hi) - 1, -1, -1):
-    print(hi[i], end="")
-
-
-if "-yay" in data or "-ay" in data:
-        print()
+print(len(test))
