@@ -1,7 +1,6 @@
 """Nolan T. 11/14/2022 - Playing with functions, list, dictionaries and random numbers."""
 from random import randint
-from typing import Type
-
+from typing import List, Dict
 print("Creating all the integers from 1 to n (inclusive) randomly.")
 n = int(input("Please enter the upper boundary, n = "))
 randomlist = []
