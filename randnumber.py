@@ -1,6 +1,5 @@
 """Nolan T. 11/14/2022 - Playing with functions, list, dictionaries and random numbers."""
 from random import randint
-from typing import List, Dict
 
 print("Creating all the integers from 1 to n (inclusive) randomly.")
 n = int(input("Please enter the upper boundary, n = "))
@@ -14,10 +13,6 @@ def new_random() -> int:
     """ returns a unique random number, one that has not been returned before. and adds it to the list"""
     random = randint(1, n)
     return randint(1, n)
-
-
-while len(randomlist) < n:
-    randomlist.append(new_random())
 
 
 def last_number():
@@ -35,13 +30,20 @@ def how_often() -> int:
     return randomlist.count(most_often())
 
 
-def back_to_back() -> (int, int):
-    """ returns a tuple 1st item is the integer that was generated back to back most often 2nd item is the max length of the series """
-    return most_often(), how_often()
+def amount_return() -> int:
+    """returns the amount of times that the new_random() was called"""
+    return len(randomlist)
 
 
-k = len(randomlist)
+while len(randomlist) < n:
+    randomlist.append(new_random())
 
-print(f"Creating a random sequence of all integers 1 .. {n} required {k} randint(1,{n}) calls")
+
+def amount() -> int:
+    """returns the amount of times that the most shown number was shown in a row"""
+    return randomlist.count(most_often())
+
+
+print(f"Creating a random sequence of all integers 1 .. {n} required {amount_return()} randint(1,{n}) calls")
 print(f"The integer that was created last was {last_number()}.")
 print(f"The integer that was created the most times in a row, {how_often()} times, was {most_often()}.")
