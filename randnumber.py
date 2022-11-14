@@ -2,7 +2,7 @@
 Author: Nolan T. (CS118 Fall Class)
 Last Edited: 11/14/2022
 Online Version Avail: https://github.com/SparksTheFolf/CS-Fall22
-This program will generate a random number between 1 and n inclusive and then repeat until n is generated. Then it will print the number of times the random number generator was called, the last number generated, the number of times the most common integer was generated, and the most common integer.
+This program will generate a random number between 1 and n and then repeat until n number of times is generated. Then it will print the number of times the random number generator was called, the last number generated, the number of times the most common integer was generated, and the most common integer.
 """
 
 from random import randint
