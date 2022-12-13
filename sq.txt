@@ -1,0 +1,40 @@
+def best_route() -> int:
+
+    for route in routes:
+        route_temp = avg_temp(route)
+        if route_temp > best_route_temp:
+            best_route_temp = route_temp
+            best_route = route
+
+    for hotel in hotels:
+        hotel_price = hotel['price']
+        if hotel_price < best_route_hotel_price:
+            best_route_hotel_price = hotel_price
+            best_route_hotel = hotel
+
+    if best_route_hotel_price > HOTEL_BUDGET:
+        return "No route available within budget"
+
+    if best_route_hotel_price <= HOTEL_BUDGET:
+        return best_route
+
+    if best_route_hotel_price <= HOTEL_BUDGET and best_route_temp <= 70:
+        return best_route
+
+    if best_route_hotel_price <= HOTEL_BUDGET and best_route_temp > 70:
+        return "No route available within budget"
+
+
+
+    print("The average temperature of the trip is: ", avg_temp(cities), "F")
+    print("The best route is: ", define_route(best_route()))
+
+
+def define_route(routes: tuple) -> str:
+    return " -> ".join([c['name'] for c in routes])
+
+# define the total cost of the trip in dollars and int
+def total_cost(hotels: tuple) -> int:
+    return sum([h['price'] for h in hotels])
+
+    # print the best route, the average temperature, and the total cost

@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Motel6",
+        "price": 
+          89
+        
+      },
+      {
+        "name": "Best Western",
+        "price": 
+          109
+      },
+      {
+        "name": "Holiday Inn Express",
+        "price": 
+          115
+
+      },
+      {
+        "name": "Courtyard by Marriott",
+        "price": 
+          229
+
+      },
+      {
+        "name": "Residence Inn",
+        "price": 
+          199
+
+
+      },
+      {
+        "name": "Hampton Inn",
+        "price":
+          209
+
+
+      }
+]
