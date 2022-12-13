@@ -1,35 +1,5 @@
 [
   {
-    "name": "Casa Grande",
-    "temp": [
-      76,
-      68,
-      60,
-      64,
-      68
-    ]
-  },
-  {
-    "name": "Chandler",
-    "temp": [
-      77,
-      68,
-      61,
-      65,
-      68
-    ]
-  },
-  {
-    "name": "Flagstaff",
-    "temp": [
-      46,
-      35,
-      33,
-      40,
-      44
-    ]
-  },
-  {
     "name": "Lake Havasu City",
     "temp": [
       71,
@@ -47,6 +17,36 @@
       45,
       51,
       56
+    ]
+  },
+  {
+    "name": "Flagstaff",
+    "temp": [
+      46,
+      35,
+      33,
+      40,
+      44
+    ]
+  },
+  {
+    "name": "Casa Grande",
+    "temp": [
+      76,
+      68,
+      60,
+      64,
+      68
+    ]
+  },
+  {
+    "name": "Chandler",
+    "temp": [
+      77,
+      68,
+      61,
+      65,
+      68
     ]
   }
 ]

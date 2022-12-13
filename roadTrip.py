@@ -18,7 +18,6 @@ HOTEL_BUDGET = 850
 avgTempCitiesList = []
 routes = ""
 hotels = ""
-best_route_temp = 0
 
 def avg_temp(routes: tuple) -> float:
     c = int(0)       
@@ -63,10 +62,19 @@ def main():
     print("Budget: $", HOTEL_BUDGET)
     print("Calculating best route...")
     best_route()
-    # print the best route with "->" between each city
     print("Best Route:", " -> ".join([city['name'] for city in best_route()]))
     print("Average Temperature:", avg_temp(best_route()), "F")
-    print("Total Cost: $", total_cost(best_route()))
+    # print each hotel in the best route
+    print("Hotels In Order:")
+    best_route_hotel = 0
+    for hotel in combinations_with_replacement(hotel_rates, len(cities)):
+        if sum([h['price'] for h in hotel]) < HOTEL_BUDGET:
+            if sum([h['price'] for h in hotel]) > best_route_hotel:
+                best_route_hotel = sum([h['price'] for h in hotel])
+                hotels = hotel
+    for hotel in hotels:
+        print(f"\t{hotel['name']}: ${hotel['price']}")
+    print("Total Hotel Cost: $", total_cost(best_route()))
     return
 
 if __name__ == '__main__':  

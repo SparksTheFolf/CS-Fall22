@@ -38,3 +38,6 @@ def total_cost(hotels: tuple) -> int:
     return sum([h['price'] for h in hotels])
 
     # print the best route, the average temperature, and the total cost
+
+
+    print("Total Cost: $", total_cost(best_route()))
