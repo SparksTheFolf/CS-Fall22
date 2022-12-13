@@ -27,7 +27,7 @@ def avg_temp(routes: tuple) -> float:
         avgTempCitiesList.append(temps[c])
         c+=1
     finalTemp = lambda avgTemp: avgTemp / len(avgTempCitiesList)
-    return round(finalTemp(sum(avgTempCitiesList)))
+    return round(finalTemp(sum(avgTempCitiesList)), 2)
 
 def best_route() -> tuple:
     best_route_temp = 0
@@ -63,9 +63,8 @@ def main():
     print("Budget: $", HOTEL_BUDGET)
     print("Calculating best route...")
     best_route()
-    print("Best Route:")
-    for city in best_route():
-        print(f"\t{city['name']}")
+    # print the best route with "->" between each city
+    print("Best Route:", " -> ".join([city['name'] for city in best_route()]))
     print("Average Temperature:", avg_temp(best_route()), "F")
     print("Total Cost: $", total_cost(best_route()))
     return
